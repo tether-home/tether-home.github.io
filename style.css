@@ -1,0 +1,136 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: #f8f8f8;
+    scroll-behavior: smooth;
+  }
+  
+  header {
+    background: #333;
+    color: white;
+    padding: 15px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  header .logo {
+    margin: 0;
+  }
+  
+  nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+  }
+  
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  /* Sections */
+  section {
+    padding: 100px 20px;
+    margin-top: 70px; /* Adjusted to account for the fixed header height */
+  }
+  
+  #home {
+    background: #eee;
+  }
+  
+  #features {
+    background: white;
+  }
+  
+  #pricing {
+    background: #eee;
+  }
+  
+  #contact {
+    background: white;
+  }
+  
+  h2 {
+    color: #333;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  ul li {
+    font-size: 18px;
+    margin: 10px 0;
+  }
+  
+  .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #333;
+    color: white;
+    text-decoration: none;
+    margin-top: 10px;
+    border-radius: 5px;
+  }
+  
+  /* Footer */
+  footer {
+    background: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  /* Mobile Responsive Styles */
+  @media (max-width: 768px) {
+    header {
+      flex-direction: column;
+      padding: 10px;
+    }
+    
+    nav ul {
+      width: 100%;
+      text-align: center;
+      margin-top: 10px;
+    }
+    
+    nav ul li {
+      display: block;
+      margin: 10px 0;
+    }
+    
+    section {
+      padding: 80px 15px;
+    }
+    
+    .btn {
+      padding: 10px 15px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    h2 {
+      font-size: 24px;
+    }
+    
+    ul li {
+      font-size: 16px;
+    }
+  }
+  
