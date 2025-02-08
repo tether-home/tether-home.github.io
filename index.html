@@ -19,6 +19,11 @@
       <img src="assets/tether-transparent.png" alt="Tether Logo" class="main-logo">
       <h1>Tether</h1>
     </div>
+    <div class="burger-menu">
+        <div class="burger-line"></div>
+        <div class="burger-line"></div>
+        <div class="burger-line"></div>
+    </div>
     <nav>
       <ul class="nav-links">
         <li><a href="#home">Home</a></li>
@@ -37,8 +42,23 @@
         <img src="assets/tether-transparent.svg" alt="Tether Logo" class="main-logo">
         <h1>Tether</h1>
         <p class="tagline">Peace of mind, one tap away</p>
+        <div class="cta-buttons">
+            <a href="#introduction" class="btn btn-primary">Learn More</a>
+            <a href="#pricing" class="btn btn-secondary">Buy Now</a>
+        </div>
       </div>
       <div class="home-right">
+        <div class="sensor-circles">
+            <div class="sensor-circle">
+                <img src="assets/motion-sensor.png" alt="Motion Sensor">
+            </div>
+            <div class="sensor-circle">
+                <img src="assets/door-sensor.png" alt="Door Sensor">
+            </div>
+            <div class="sensor-circle">
+                <img src="assets/smart-plug.png" alt="Smart Plug">
+            </div>
+        </div>
         <img src="assets/home-mock.png" alt="Tether App Preview" class="app-preview">
         <img src="assets/emphasis-lines.svg" alt="Tether Logo" class="lines">
       </div>
@@ -49,7 +69,7 @@
 
     <div class="intro-content">
         <div class="intro-content-left">
-            <img src="assets/triple-mock.png" alt="App Preview" class="triple-mock">
+            <img src="assets/intro-image.png" alt="App Preview" class="intro-image">
         </div>
         <div class="intro-content-right">
             <div class="title-container">
@@ -60,6 +80,23 @@
             <p>Passive monitoring solution designed to provide peace of mind to loved ones and carers.</p>
             <h3 class="intro-subtitle">How Does Tether Work?</h3>
             <p>Utilising affordable smart sensors, a loved one's daily activity and routines can be easily monitored. Giving you the peace of mind that they are safe and well.</p>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">❤️</div>
+                    <h4>Peace of Mind</h4>
+                    <p>Know your loved ones are safe without needing intrusive cameras</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🏠</div>
+                    <h4>Maintain Independence</h4>
+                    <p>Allow elderly relatives to live independently for longer</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">⚡</div>
+                    <h4>Simple Setup</h4>
+                    <p>Install and configure in under 30 minutes</p>
+                </div>
+            </div>
           </div>
     </div>
   </section>
@@ -86,7 +123,7 @@
     </div>
     
   </section>
-
+<!-- 
   <section id="sensors">
     <div class="sensors-container">
         <div class="sensors-left">
@@ -99,7 +136,7 @@
             </div>
             <div class="sensor-features">
                 <div class="sensor-feature">
-                    <div class="feature-icon-text">£</div>
+                    <div class="feature-icon">£</div>
                     <p>Each device costs between £12 and £15</p>
                 </div>
                 <div class="sensor-feature">
@@ -117,32 +154,73 @@
             </div>
         </div>
     </div>
-</section>
+  </section> -->
+
 
   <!-- Pricing Section -->
   <section id="pricing">
-    <h2>Pricing</h2>
-    <p><strong>Starter Pack: £199</strong></p>
-    <p>Includes:</p>
-    <ul>
-      <li>2x Motion Sensors</li>
-      <li>2x Smart Plugs</li>
-      <li>2x Door Sensors</li>
-      <li>1x Hub</li>
-    </ul>
-    <p>Subscription: £10 per week after 3 months</p>
-    <p>Additional Devices: £12-15 each</p>
+    <div class="pricing-container">
+
+      <div class="pricing-left">
+        <div class="title-container">
+          <h2 class="intro-title">Starter Pack</h2>
+          <img src="assets/title-line.svg" alt="lines" class="title-line">
+        </div>
+        
+        <div class="price-text-container">
+          <div class="price-circle">
+            <span class="amount">£199</span>
+          </div>
+          <div class="pricing-text">
+            <p><strong>3 Months</strong> Subscription included</p>
+            <ul>
+              <li><strong>2x</strong> Motion Sensors</li>
+              <li><strong>2x</strong> Smart Plugs</li>
+              <li><strong>2x</strong> Door Sensors</li>
+              <li><strong>1x</strong> Hub</li>
+            </ul>
+            <p><strong>Additional Devices:</strong> £12-15 each</p>
+            <p><strong>Subscription:</strong> £10 per week after the included 3 months</p>
+            <a href="#contact" class="btn btn-primary buy-btn">Order Starter Pack</a>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="pricing-right">
+        <img src="assets/pricing-diagram.jpg" alt="Pricing Diagram" class="pricing-diagram">
+      </div>
+    </div>
+  
   </section>
 
-  <!-- Contact Section -->
-  <section id="contact">
-    <h2>Contact Us</h2>
-    <p>Email: <a href="mailto:sam.tetherhome@gmail.com">sam.tetherhome@gmail.com</a></p>
-  </section>
-
+<!-- Contact Section -->
+<section id="contact">
+  <div class="contact-container">
+    <div class="contact-left">
+      <div class="title-container">
+        <h2 class="contact-title">Get in Touch</h2>
+        <img src="assets/title-line.svg" alt="lines" class="title-line">
+      </div>
+      <p class="contact-subtitle">Have questions? We'd love to hear from you.</p>
+    </div>
+    <div class="contact-right">
+      <div class="contact-info">
+        <div class="contact-info-item">
+          <i>📧</i>
+          <p>sam.tetherhome@gmail.com</p>
+        </div>
+        <div class="contact-info-item">
+          <i>📍</i>
+          <p>Manchester, United Kingdom</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
   <!-- Footer -->
   <footer>
-    <p>&copy; 2024 Tether. All rights reserved.</p>
+    <p>&copy; 2025 Tether Home. All rights reserved.</p>
   </footer>
 
 </body>
