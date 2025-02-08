@@ -45,6 +45,11 @@ header .main-logo {
     width: 60px;
 }
 
+header h2 {
+    font-size: 23px;
+    font-family: 'Architects Daughter', cursive;
+}
+
 nav ul {
     list-style: none;
     padding: 0;
@@ -86,7 +91,7 @@ section {
 }
 /* Common Title Styles */
 .intro-title {
-    font-size: 48px;
+    font-size: 42px;
     margin-bottom: 5px;
     color: 'black';
     position: relative;
@@ -145,6 +150,11 @@ section {
 .tagline {
     font-size: 40px;
     font-family: 'Architects Daughter', cursive;
+    margin-top: 10px;
+}
+
+.tagline-sub {
+    font-size: 30px;
     margin-top: 10px;
 }
 
@@ -248,11 +258,15 @@ section {
 }
 
 .benefit-card {
-  background: #ffffff;
-  padding: 30px;
-  border-radius: 20px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    text-align: left;
 }
 
 .benefit-card:hover {
@@ -260,15 +274,20 @@ section {
 }
 
 .benefit-icon {
-  font-size: 50px;
-  margin-bottom: 20px;
+    font-size: 50px;
+    margin-bottom: 0;
+    flex-shrink: 0;
+}
+
+.benefit-card .text-content {
+    flex: 1;
 }
 
 .benefit-card h4 {
-  font-size: 24px;
-  margin: 15px 0;
-  color: #101F41;
-  font-family: 'Architects Daughter', cursive;
+    font-size: 24px;
+    margin: 0 0 10px 0;
+    color: #101F41;
+    font-family: 'Architects Daughter', cursive;
 }
 
 .benefit-card p {
@@ -301,12 +320,12 @@ section {
     margin-bottom: 20px;
 }
 
-#features h2 {
+/* #features h2 {
     font-size: 40px;
     margin-bottom: 15px;
     font-weight: 1000;
     position: relative;
-}
+} */
 
 #features ul {
     display: grid;
@@ -427,6 +446,14 @@ section {
     background: linear-gradient(180deg, #EEF3FF 90%, #ffffff 100%);
 }
 
+#pricing h2 {
+    font-size: 50px;
+}
+
+#pricing .title-line {
+  max-width: 20%;
+}
+
 .pricing-container {
     margin: 0 auto;
     display: flex;
@@ -489,6 +516,14 @@ section {
 
 .buy-btn {
     background: #101F41;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.bag-icon {
+    font-size: 24px;
 }
 
 /* Contact Section */
@@ -645,6 +680,10 @@ footer {
       margin: 0;
   }
 
+  header h2 {
+    display: none;
+  }
+
   /* Fix section padding */
   section {
       padding: 60px 0;
@@ -696,9 +735,10 @@ footer {
       max-width: 70%;
   }
 
+
   /* Features section */
   #features {
-      padding: 40px 20px;
+      padding: 0px 20px;
   }
 
   #features ul {
@@ -720,19 +760,40 @@ footer {
       padding: 20px;
   }
 
-  /* Pricing section */
-  .pricing-container {
-      padding: 20px;
-  }
-
-  .price-text-container {
-      width: 100%;
-      margin: 20px 0;
-  }
 
   /* Contact section */
   .contact-container {
+      flex-direction: column;
+      gap: 30px;
       padding: 20px;
+  }
+
+  .contact-left, 
+  .contact-right {
+      width: 100%;
+      text-align: center;
+  }
+
+  .contact-info {
+      margin-top: 20px;
+  }
+
+  .contact-info-item {
+      justify-content: center;
+  }
+
+  .contact-title {
+      text-align: center;
+  }
+
+  .contact-subtitle {
+      text-align: center;
+  }
+
+  #contact .title-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
   }
 
   /* Remove any fixed widths on images */
@@ -843,30 +904,50 @@ footer {
 
   .benefit-card {
       padding: 20px;
+      flex-direction: row;
+      align-items: center;
+      gap: 20px;
+      text-align: left;
   }
 
   .benefit-icon {
-      font-size: 40px;
-      margin-bottom: 15px;
+      font-size: 35px;
+      margin: 0;
+      width: auto;
+  }
+
+  .text-content {
+      flex: 1;
   }
 
   .benefit-card h4 {
       font-size: 20px;
+      margin: 0 0 5px 0;
   }
 
   .benefit-card p {
       font-size: 14px;
+      margin: 0;
   }
 
   /* Features Mobile Styles */
+
+  #features {
+    padding-bottom: 80px
+  }
   #features ul {
       grid-template-columns: 1fr;
       padding: 0;
+      gap: 10px;
   }
 
   #features li {
       font-size: 18px;
-      padding: 10px 15px;
+      padding: 15px 15px;
+  }
+
+  #features .double-mock   {
+    display: none;
   }
 
   /* Sensors Mobile Styles */
@@ -900,30 +981,85 @@ footer {
   }
 
   /* Pricing Mobile Styles */
-  .price-text-container {
-      width: 90%;
+  #pricing {
+    padding-top: 10px;
+  }
+  #pricing h2 {
+    font-size: 35px;
+    }
+  .pricing-container {
+    display: flex;
+    flex-direction: column;
+    }
+
+    .pricing-left {
+        order: 2;  /* Move price text below */
+        margin-top: 0px;
+        padding: 0px;
+        flex: 1;
+    }
+
+    .pricing-right {
+        order: 1;  /* Move image above */
+        padding-right: 0;
+        margin-bottom: 30px;
+        margin-top: 30px;
+    }
+
+    .pricing-diagram {
+        max-width: 100%;
+        margin: 0 auto;
+        display: block;
+    }
+
+    .price-circle {
+      width: 130px;
+      height: 130px;
+      margin: 10px auto;
+    }
+
+    .price-circle .amount {
+      font-size: 38px;
+    }
+
+    .price-text-container {
+        width: 100%;
+        margin: 20px 0;
+    }
+
+  #pricing .title-line {
+    max-width:50%;
   }
 
-  .price-circle {
-      width: 140px;
-      height: 140px;
+  .pricing-container {
+    gap: 0px;
   }
 
-  .price-circle .amount {
-      font-size: 40px;
+  #pricing .buy-btn {
+    margin-top: 35px;
+    font-size: 18px;
   }
 
   /* Contact Mobile Styles */
+  #contact {
+    padding-top: 10px;
+  }
   .contact-title {
       font-size: 36px;
+      margin-bottom: 10px;
+  }
+
+  #contact .title-line {
+    max-width: 80%;
   }
 
   .contact-subtitle {
-      font-size: 20px;
+      font-size: 25px;
+      margin-bottom: 0px;
   }
 
   .contact-info-item {
-      font-size: 16px;
+      font-size: 20px;
   }
 
   .contact-info-item i {
@@ -996,6 +1132,10 @@ footer {
   .app-preview {
       max-width: 70%;
   }
+
+  .bag-icon {
+      font-size: 20px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -1017,11 +1157,11 @@ footer {
   }
 
   .intro-title {
-      font-size: 28px;
+      font-size: 30px;
   }
 
   .intro-subtitle {
-      font-size: 20px;
+      font-size: 25px;
   }
 
   #features li {
@@ -1034,12 +1174,14 @@ footer {
       font-size: 24px;
   }
 
+
   .sensor-feature p {
       font-size: 14px;
   }
 
   .price-text-container {
       padding: 15px;
+      padding-bottom: 25px;
   }
 
   .pricing-text p,
@@ -1048,7 +1190,7 @@ footer {
   }
 
   .contact-info-item p {
-      font-size: 14px;
+      font-size: 17px;
   }
 }
 
