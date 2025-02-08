@@ -32,5 +32,24 @@ document.addEventListener("DOMContentLoaded", function () {
             burgerMenu.classList.remove('active');
         }
     });
+
+    // Handle starter pack order button
+    const orderButton = document.querySelector('.buy-btn');
+    orderButton.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        const email = 'sam.tetherhome@gmail.com';
+        const subject = 'Tether Starter Pack Order';
+        const body = `Hi,
+
+I'd like to order a Tether Starter Pack.
+
+Best regards,
+
+[Insert Name]`;
+
+        const mailtoLink = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        window.location.href = mailtoLink;
+    });
   });
   
