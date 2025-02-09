@@ -605,6 +605,7 @@ section {
     align-items: center;
     justify-content: center;
     gap: 10px;
+    margin: auto;
 }
 
 .bag-icon {
@@ -1446,4 +1447,25 @@ footer {
 /* Add at the top after reset styles */
 * {
     box-sizing: border-box;
+}
+
+.intro-list {
+    list-style: disc;
+    padding-left: 25px;
+    margin: 15px 0;
+}
+
+.intro-list li {
+    font-size: 20px;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 15px;
+    padding-left: 10px;
+}
+
+@media (max-width: 768px) {
+    .intro-list li {
+        font-size: 16px;
+        line-height: 1.5;
+    }
 }
