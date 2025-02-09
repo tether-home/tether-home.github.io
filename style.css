@@ -22,7 +22,7 @@ ul li {
 header {
     background: #101F41;
     color: white;
-    position: fixed;
+    position: sticky;
     padding: 0 10px; 
     top: 0;
     width: 100%;
@@ -117,12 +117,12 @@ section {
 /* Home Section */
 #home {
     background: #101F41;
-
     color: white;
     min-height: 80vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    padding-top: 0;
 }
 
 .home-container {
@@ -292,7 +292,8 @@ section {
         flex-direction: row;
         padding: 10px;
         justify-content: flex-start;
-        position: relative;
+        position: sticky;
+        top: 0;
     }
 
     .logo {
@@ -831,27 +832,17 @@ footer {
       margin: 0;
   }
 
-  header h2 {
-    display: none;
-  }
-
-  /* Fix section padding */
-  section {
-      padding: 60px 0;
-      width: 100%;
-      overflow: hidden;  /* Prevent horizontal scroll */
-  }
-
-  /* Header adjustments */
   header {
       width: 100%;
       padding: 10px 20px;
+      position: sticky;
+      top: 0;
   }
 
   /* Home section mobile layout */
   #home {
       min-height: auto;
-      padding-top: 10px;  /* Account for fixed header */
+      padding-top: 0;
   }
 
   .home-container {
@@ -963,7 +954,8 @@ footer {
       flex-direction: row;
       padding: 10px;
       justify-content: flex-start;
-      position: relative;
+      position: sticky;
+      top: 0;
   }
   
   .logo {
@@ -1237,7 +1229,8 @@ footer {
   /* Update existing mobile header styles */
   header {
       padding: 10px;
-      position: relative;
+      position: sticky;
+      top: 0;
   }
 
   .logo {
@@ -1384,7 +1377,9 @@ footer {
         flex-direction: row;
         padding: 10px;
         justify-content: flex-start;
-        position: relative;
+        position: sticky;
+        top: 0;
+        padding: 0;
     }
     
     .logo {
