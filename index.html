@@ -3,11 +3,34 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Add SEO meta tags -->
+  <meta name="description" content="Tether - A passive monitoring solution helping elderly loved ones live independently. Smart sensors for peace of mind, one tap away.">
+  <meta name="keywords" content="elderly monitoring, senior care, smart home, independent living, elderly care, remote monitoring, senior safety">
+  <meta name="author" content="Tether Home">
+  
+  <!-- Open Graph meta tags for social sharing -->
+  <meta property="og:title" content="Tether - Peace of Mind, One Tap Away">
+  <meta property="og:description" content="Help your elderly loved ones live independently with smart home monitoring.">
+  <meta property="og:image" content="https://tetherhome.co.uk/assets/tether-og-image.png">
+  <meta property="og:url" content="https://tetherhome.co.uk">
+  <meta property="og:type" content="website">
+  
+  <!-- Twitter Card meta tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Tether - Peace of Mind, One Tap Away">
+  <meta name="twitter:description" content="Help your elderly loved ones live independently with smart home monitoring.">
+  <meta name="twitter:image" content="https://tetherhome.co.uk/assets/tether-og-image.png">
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://tetherhome.co.uk">
   <link rel="icon" type="image/png" href="assets/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
-  <title>Tether - Peace of Mind, One Tap Away</title>
+  <title>Tether - Peace of Mind, One Tap Away | Elderly Care Monitoring</title>
   <link rel="stylesheet" href="style.css">
   <script defer src="script.js"></script>
   <!-- Google tag (gtag.js) -->
@@ -23,7 +46,7 @@
 <body>
 
   <!-- Navigation -->
-  <header>
+  <header role="banner">
     <div class="logo">
       <img src="assets/tether-transparent.png" alt="Tether Logo" class="main-logo">
       <h1>Tether</h1>
@@ -45,210 +68,212 @@
     </nav>
   </header>
 
-  <!-- Home Section -->
-  <section id="home">
-    <div class="home-container">
-      <div class="home-left">
-        <img src="assets/tether-transparent.svg" alt="Tether Logo" class="main-logo">
-        <h1>Tether</h1>
-        <!-- <p class="tagline">Peace of mind, one tap away</p> -->
-        <p class="tagline">Passive monitoring to help you care for your elderly loved ones</p>
-        <div class="cta-buttons">
-            <a href="#introduction" class="btn btn-primary">Learn More</a>
-            <a href="#pricing" class="btn btn-secondary">Buy Now</a>
-        </div>
-      </div>
-      <div class="home-right">
-        <div class="sensor-circles">
-            <div class="sensor-circle">
-                <img src="assets/motion-sensor.png" alt="Motion Sensor">
-            </div>
-            <div class="sensor-circle">
-                <img src="assets/door-sensor.png" alt="Door Sensor">
-            </div>
-            <div class="sensor-circle">
-                <img src="assets/smart-plug.png" alt="Smart Plug">
-            </div>
-        </div>
-        <img src="assets/home-mock.png" alt="Tether App Preview" class="app-preview">
-        <img src="assets/emphasis-lines.svg" alt="Tether Logo" class="lines">
-      </div>
-    </div>
-  </section>
-
-  <section id="introduction">
-
-    <div class="intro-content">
-        <div class="intro-content-left">
-            <img src="assets/intro-image.jpg" alt="App Preview" class="intro-image">
-        </div>
-        <div class="intro-content-right">
-            <div class="title-container">
-                <h2 class="intro-title">Introduction</h2>
-                <img src="assets/title-line.svg" alt="lines" class="title-line">
-            </div>
-            <h3 class="intro-subtitle">What is Tether?</h3>
-            <ul class="intro-list">
-                <li>Passive monitoring solution designed to enable people to live independently for longer.</li>
-            </ul>
-            <h3 class="intro-subtitle">How Does Tether Work?</h3>
-            <ul class="intro-list">
-                <li>Utilising affordable smart sensors, daily activity such as meal preperation and movement around the home can be easily monitored.</li>
-                <li>Giving you the peace of mind that they are safe and well.</li>
-            </ul>
-            <div class="benefits-grid">
-                <div class="benefit-card">
-                    <div class="benefit-icon">❤️</div>
-                    <div class="text-content">
-                        <h4>Peace of Mind</h4>
-                        <p>Know your loved ones are safe without needing intrusive cameras</p>
-                    </div>
-                </div>
-                <div class="benefit-card">
-                    <div class="benefit-icon">🏠</div>
-                    <div class="text-content">
-                        <h4>Maintain Independence</h4>
-                        <p>Allow elderly relatives to live independently for longer</p>
-                    </div>
-                </div>
-                <div class="benefit-card">
-                    <div class="benefit-icon">⚡</div>
-                    <div class="text-content">
-                        <h4>Simple Setup</h4>
-                        <p>Install and configure in under 30 minutes</p>
-                    </div>
-                </div>
-            </div>
+  <main role="main">
+    <!-- Home Section -->
+    <section id="home" aria-label="Home">
+      <div class="home-container">
+        <div class="home-left">
+          <img src="assets/tether-transparent.svg" alt="Tether Logo" class="main-logo">
+          <h1>Tether</h1>
+          <!-- <p class="tagline">Peace of mind, one tap away</p> -->
+          <p class="tagline">Passive monitoring to help you care for your elderly loved ones</p>
+          <div class="cta-buttons">
+              <a href="#introduction" class="btn btn-primary">Learn More</a>
+              <a href="#pricing" class="btn btn-secondary">Buy Now</a>
           </div>
-    </div>
-  </section>
+        </div>
+        <div class="home-right">
+          <div class="sensor-circles">
+              <div class="sensor-circle">
+                  <img src="assets/motion-sensor.png" alt="Motion Sensor">
+              </div>
+              <div class="sensor-circle">
+                  <img src="assets/door-sensor.png" alt="Door Sensor">
+              </div>
+              <div class="sensor-circle">
+                  <img src="assets/smart-plug.png" alt="Smart Plug">
+              </div>
+          </div>
+          <img src="assets/home-mock.png" alt="Tether App Preview" class="app-preview">
+          <img src="assets/emphasis-lines.svg" alt="Tether Logo" class="lines">
+        </div>
+      </div>
+    </section>
 
-  <!-- Features Section -->
-  <section id="features">
-    <div class="features-left">
-        <div class="title-container">
-            <h2 class="intro-title">What Can Tether Monitor?</h2>
-            <img src="assets/title-line.svg" alt="lines" class="features-title-line">
-        </div>
-        <ul>
-            <li data-icon="🍽️">Eating Habits</li>
-            <li data-icon="🌙">Night-time Activity</li>
-            <li data-icon="⏰">Regular Routines</li>
-            <li data-icon="🚿">Hygiene Habits</li>
-            <li data-icon="🚶‍♂️">Movement</li>
-            <li data-icon="🚽">Bathroom Usage</li>
-            <li data-icon="💊">Medication Tracking</li>
-        </ul>
-    </div>
-    <div class="features-right">
-        <img src="assets/double-mock.png" alt="double-mock" class="double-mock">
-    </div>
-    
-  </section>
-<!--
-  <section id="sensors">
-    <div class="sensors-container">
-        <div class="sensors-left">
-            <img src="assets/sensor-diagram.jpg" alt="Sensor Diagram" class="sensors-diagram">
-        </div>
-        <div class="sensors-right">
-            <div class="title-container centre">
-                <h2 class="intro-title">The Sensors</h2>
-                <img src="assets/title-line.svg" alt="lines" class="title-line">
+    <section id="introduction" aria-label="Introduction">
+      <div class="intro-content">
+          <div class="intro-content-left">
+              <img src="assets/intro-image.jpg" alt="App Preview" class="intro-image">
+          </div>
+          <div class="intro-content-right">
+              <div class="title-container">
+                  <h2 class="intro-title">Introduction</h2>
+                  <img src="assets/title-line.svg" alt="lines" class="title-line">
+              </div>
+              <h3 class="intro-subtitle">What is Tether?</h3>
+              <ul class="intro-list">
+                  <li>Passive monitoring solution designed to enable people to live independently for longer.</li>
+              </ul>
+              <h3 class="intro-subtitle">How Does Tether Work?</h3>
+              <ul class="intro-list">
+                  <li>Utilising affordable smart sensors, daily activity such as meal preperation and movement around the home can be easily monitored.</li>
+                  <li>Giving you the peace of mind that they are safe and well.</li>
+              </ul>
+              <div class="benefits-grid">
+                  <div class="benefit-card">
+                      <div class="benefit-icon">❤️</div>
+                      <div class="text-content">
+                          <h4>Peace of Mind</h4>
+                          <p>Know your loved ones are safe without needing intrusive cameras</p>
+                      </div>
+                  </div>
+                  <div class="benefit-card">
+                      <div class="benefit-icon">🏠</div>
+                      <div class="text-content">
+                          <h4>Maintain Independence</h4>
+                          <p>Allow elderly relatives to live independently for longer</p>
+                      </div>
+                  </div>
+                  <div class="benefit-card">
+                      <div class="benefit-icon">⚡</div>
+                      <div class="text-content">
+                          <h4>Simple Setup</h4>
+                          <p>Install and configure in under 30 minutes</p>
+                      </div>
+                  </div>
+              </div>
             </div>
-            <div class="sensor-features">
-                <div class="sensor-feature">
-                    <div class="feature-icon">£</div>
-                    <p>Each device costs between £12 and £15</p>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" aria-label="Features">
+      <div class="features-left">
+          <div class="title-container">
+              <h2 class="intro-title">What Can Tether Monitor?</h2>
+              <img src="assets/title-line.svg" alt="lines" class="features-title-line">
+          </div>
+          <ul>
+              <li data-icon="🍽️">Eating Habits</li>
+              <li data-icon="🌙">Night-time Activity</li>
+              <li data-icon="⏰">Regular Routines</li>
+              <li data-icon="🚿">Hygiene Habits</li>
+              <li data-icon="🚶‍♂️">Movement</li>
+              <li data-icon="🚽">Bathroom Usage</li>
+              <li data-icon="💊">Medication Tracking</li>
+          </ul>
+      </div>
+      <div class="features-right">
+          <img src="assets/double-mock.png" alt="double-mock" class="double-mock">
+      </div>
+      
+    </section>
+  <!--
+    <section id="sensors">
+      <div class="sensors-container">
+          <div class="sensors-left">
+              <img src="assets/sensor-diagram.jpg" alt="Sensor Diagram" class="sensors-diagram">
+          </div>
+          <div class="sensors-right">
+              <div class="title-container centre">
+                  <h2 class="intro-title">The Sensors</h2>
+                  <img src="assets/title-line.svg" alt="lines" class="title-line">
+              </div>
+              <div class="sensor-features">
+                  <div class="sensor-feature">
+                      <div class="feature-icon">£</div>
+                      <p>Each device costs between £12 and £15</p>
+                  </div>
+                  <div class="sensor-feature">
+                    <div class="feature-icon">
+                        <img src="assets/matter-logo.png" alt="Download Icon" class="feature-icon-img">
+                    </div>
+                    <p>Uses the latest smart home protocol, 'Matter', enabling seamless pairing</p>
                 </div>
                 <div class="sensor-feature">
                   <div class="feature-icon">
-                      <img src="assets/matter-logo.png" alt="Download Icon" class="feature-icon-img">
+                      <img src="assets/globe-icon.png" alt="Globe Icon" class="feature-icon-img">
                   </div>
-                  <p>Uses the latest smart home protocol, 'Matter', enabling seamless pairing</p>
+                  <p>Reliable off-the-shelf sensors, no custom hardware</p>
               </div>
-              <div class="sensor-feature">
-                <div class="feature-icon">
-                    <img src="assets/globe-icon.png" alt="Globe Icon" class="feature-icon-img">
-                </div>
-                <p>Reliable off-the-shelf sensors, no custom hardware</p>
-            </div>
-            </div>
-        </div>
-    </div>
-  </section> -->
-
-
-  <!-- Pricing Section -->
-  <section id="pricing">
-    <div class="title-container">
-      <h2 class="intro-title">Starter Pack</h2>
-      <img src="assets/title-line.svg" alt="lines" class="title-line">
-    </div>
-    <div class="pricing-container">
-
-      <div class="pricing-left">
-        
-        <div class="price-text-container">
-          <div class="price-circle">
-            <span class="amount">£199</span>
+              </div>
           </div>
-          <div class="pricing-text">
-            <p><strong>3 Months</strong> Subscription included</p>
-            <ul>
-              <li><strong>2x</strong> Motion Sensors</li>
-              <li><strong>2x</strong> Smart Plugs</li>
-              <li><strong>2x</strong> Door Sensors</li>
-              <li><strong>1x</strong> Hub</li>
-            </ul>
-            <p><strong>Additional Devices:</strong> £12-15 each</p>
-            <p><strong>Subscription:</strong> £10 per week after the included 3 months</p>
-            <a href="mailto:sam.tetherhome@gmail.com?subject=Tether%20Starter%20Pack%20Order&body=Hi%2C%0D%0A%0D%0AI'd%20like%20to%20order%20a%20Tether%20Starter%20Pack.%0D%0A%0D%0APlease%20contact%20me%20to%20arrange%20payment%20and%20delivery.%0D%0A%0D%0ABest%20regards" class="btn btn-primary buy-btn">
-                <span class="bag-icon">🛍️</span>
-                Order Starter Pack
-            </a>
-          </div>
-        </div>
       </div>
+    </section> -->
 
 
-      <div class="pricing-right">
-        <img src="assets/pricing-diagram.jpg" alt="Pricing Diagram" class="pricing-diagram">
-      </div>
-    </div>
-  
-  </section>
-
-<!-- Contact Section -->
-<section id="contact">
-  <div class="contact-container">
-    <div class="contact-left">
+    <!-- Pricing Section -->
+    <section id="pricing" aria-label="Pricing">
       <div class="title-container">
-        <h2 class="contact-title">Get in Touch</h2>
+        <h2 class="intro-title">Starter Pack</h2>
         <img src="assets/title-line.svg" alt="lines" class="title-line">
       </div>
-      <p class="contact-subtitle">Have questions? We'd love to hear from you.</p>
-    </div>
-    <div class="contact-right">
-      <div class="contact-info">
-        <div class="contact-info-item">
-          <i>📧</i>
-          <p>sam.tetherhome@gmail.com</p>
+      <div class="pricing-container">
+
+        <div class="pricing-left">
+          
+          <div class="price-text-container">
+            <div class="price-circle">
+              <span class="amount">£199</span>
+            </div>
+            <div class="pricing-text">
+              <p><strong>3 Months</strong> Subscription included</p>
+              <ul>
+                <li><strong>2x</strong> Motion Sensors</li>
+                <li><strong>2x</strong> Smart Plugs</li>
+                <li><strong>2x</strong> Door Sensors</li>
+                <li><strong>1x</strong> Hub</li>
+              </ul>
+              <p><strong>Additional Devices:</strong> £12-15 each</p>
+              <p><strong>Subscription:</strong> £10 per week after the included 3 months</p>
+              <a href="mailto:sam.tetherhome@gmail.com?subject=Tether%20Starter%20Pack%20Order&body=Hi%2C%0D%0A%0D%0AI'd%20like%20to%20order%20a%20Tether%20Starter%20Pack.%0D%0A%0D%0APlease%20contact%20me%20to%20arrange%20payment%20and%20delivery.%0D%0A%0D%0ABest%20regards" class="btn btn-primary buy-btn">
+                  <span class="bag-icon">🛍️</span>
+                  Order Starter Pack
+              </a>
+            </div>
+          </div>
         </div>
-        <div class="contact-info-item">
-          <i>📍</i>
-          <p>Manchester, United Kingdom</p>
+
+
+        <div class="pricing-right">
+          <img src="assets/pricing-diagram.jpg" alt="Pricing Diagram" class="pricing-diagram">
         </div>
       </div>
-      <a href="mailto:sam.tetherhome@gmail.com?subject=Tether%20Contact%20Us&body=Hi%2C%0D%0A%0D%0A%5BYour%20message%20here%5D%0D%0A%0D%0ABest%20regards%2C%0D%0A%5BYour%20name%5D" class="btn btn-primary contact-btn">
-        <span class="email-icon">📧</span>
-        Email Us
-      </a>
+    
+    </section>
+
+  <!-- Contact Section -->
+  <section id="contact" aria-label="Contact">
+    <div class="contact-container">
+      <div class="contact-left">
+        <div class="title-container">
+          <h2 class="contact-title">Get in Touch</h2>
+          <img src="assets/title-line.svg" alt="lines" class="title-line">
+        </div>
+        <p class="contact-subtitle">Have questions? We'd love to hear from you.</p>
+      </div>
+      <div class="contact-right">
+        <div class="contact-info">
+          <div class="contact-info-item">
+            <i>📧</i>
+            <p>sam.tetherhome@gmail.com</p>
+          </div>
+          <div class="contact-info-item">
+            <i>📍</i>
+            <p>Manchester, United Kingdom</p>
+          </div>
+        </div>
+        <a href="mailto:sam.tetherhome@gmail.com?subject=Tether%20Contact%20Us&body=Hi%2C%0D%0A%0D%0A%5BYour%20message%20here%5D%0D%0A%0D%0ABest%20regards%2C%0D%0A%5BYour%20name%5D" class="btn btn-primary contact-btn">
+          <span class="email-icon">📧</span>
+          Email Us
+        </a>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
+  </main>
+
   <!-- Footer -->
-  <footer>
+  <footer role="contentinfo">
     <p>&copy; 2025 Tether Home. All rights reserved.</p>
   </footer>
 
