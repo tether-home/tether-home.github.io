@@ -250,11 +250,95 @@ section {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
+/* Default 3-column layout */
 .benefits-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
-  margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 50px;
+}
+
+/* At 1400px, change to 2-column layout */
+@media (max-width: 1400px) {
+    .benefits-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+
+    /* Make the last card take full width */
+    .benefit-card:last-child {
+        grid-column: 1 / -1;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+}
+
+/* At 1200px, change to single column */
+@media (max-width: 1200px) {
+    .benefits-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    /* Reset the last card styling */
+    .benefit-card:last-child {
+        grid-column: auto;
+        max-width: none;
+        margin: 0;
+    }
+
+    /* Header Mobile Styles */
+    header {
+        flex-direction: row;
+        padding: 10px;
+        justify-content: flex-start;
+        position: relative;
+    }
+
+    .logo {
+        margin-right: auto;
+        padding-left: 10px;
+    }
+
+    nav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: #101F41;
+        display: none;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    nav.active {
+        display: block;
+    }
+
+    nav ul {
+        width: 100%;
+        text-align: center;
+        margin: 0;
+        padding: 10px 0;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 13px 0;
+        font-size: 23px;
+        font-family: 'Architects Daughter', cursive;
+    }
+
+    /* Show burger menu */
+    .burger-menu {
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+    }
+
+    header h2 {
+        display: none;
+    }
 }
 
 .benefit-card {
@@ -311,6 +395,9 @@ section {
 
 .features-right {
     flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .features-title-line {
@@ -369,6 +456,7 @@ section {
 .double-mock {
     max-width: 70%;
     height: auto;
+    margin: 0 auto;
 }
 
 /* Sensors Section */
@@ -463,17 +551,14 @@ section {
 
 .pricing-left {
     flex: 0.75;
-    padding: 40px;
 }
 
 .pricing-right {
-    flex: 0.25;
-    padding-right: 100px;
+    flex: 0.7;
 }
 
 .pricing-diagram {
-    width: auto;
-    max-height: 600px;
+    width: 100%;
     height: auto;
     margin-top: 120px;
 }
@@ -483,8 +568,9 @@ section {
     padding: 20px;
     border-radius: 30px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    width: 50%;
+    width: 100%;
     margin: 40px auto;
+    max-width: 500px;
 }
 
 .price-circle {
@@ -624,13 +710,49 @@ footer {
       padding: 0 15px;
   }
 
+  /* Home Section */
   .home-left h1 {
-      font-size: 100px;
+      font-size: 80px;
   }
 
-  .price-text-container {
-      width: 70%;
+  .home-left .tagline {
+    font-size: 30px;
   }
+
+  .lines {
+    display: none;
+  }
+
+  .app-preview {
+    width: 50%;
+  }
+
+  .sensor-circle {
+    width: 100px;
+    height: 100px;
+  }
+
+  .sensor-circle {
+    width: 110px;
+    height: 110px;
+  }
+
+  /* Introduction Section */
+  .intro-content {
+    display: block
+  }
+
+  .intro-image {
+    margin-top: 10px;
+    width: 70%;
+  }
+
+  .benefits-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+
 }
 
 @media (max-width: 992px) {
@@ -642,10 +764,14 @@ footer {
 
   .features-right {
       text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
   }
 
   .double-mock {
       max-width: 50%;
+      margin: 0 auto;
   }
 
   /* Pricing adjustments */
@@ -653,8 +779,13 @@ footer {
       flex-direction: column;
   }
 
+  .pricing-left {
+    order: 2;
+  }
+
   .pricing-right {
-      padding-right: 0;
+    order: 1;
+    padding-right: 0;
   }
 
   .pricing-diagram {
@@ -676,6 +807,13 @@ footer {
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
 }
+
+  /* Make the last card take full width */
+  .benefit-card:last-child {
+      grid-column: 1 / -1;
+      max-width: 400px;
+      margin: 0 auto;
+  }
 }
 
 @media (max-width: 768px) {
@@ -921,32 +1059,10 @@ footer {
     gap: 20px;
 }
 
-  .benefit-card {
-      padding: 20px;
-      flex-direction: row;
-      align-items: center;
-      display: flex;
-      gap: 20px;
-      text-align: left;
-  }
-
-  .benefit-icon {
-      font-size: 35px;
-      margin: 0;
-      width: auto;
-  }
-
-  .text-content {
-      flex: 1;
-  }
-
-  .benefit-card h4 {
-      font-size: 20px;
-      margin: 0 0 5px 0;
-  }
-
-  .benefit-card p {
-      font-size: 14px;
+  /* Reset the last card styling */
+  .benefit-card:last-child {
+      grid-column: auto;
+      max-width: none;
       margin: 0;
   }
 
@@ -1013,14 +1129,12 @@ footer {
     }
 
     .pricing-left {
-        order: 2;  /* Move price text below */
         margin-top: 0px;
         padding: 0px;
         flex: 1;
     }
 
     .pricing-right {
-        order: 1;  /* Move image above */
         padding-right: 0;
         margin-bottom: 30px;
         margin-top: 30px;
@@ -1244,7 +1358,7 @@ footer {
   }
 }
 
-/* Add these burger menu base styles after the header styles */
+/* Move burger menu base styles near the top with other header styles */
 .burger-menu {
     display: none;
     cursor: pointer;
@@ -1260,16 +1374,74 @@ footer {
     transition: all 0.3s ease;
 }
 
-/* Then in the existing mobile styles, we just need to change display to block */
-@media (max-width: 768px) {
+/* Update the 1200px media query */
+@media (max-width: 1200px) {
+    /* ... other 1200px styles ... */
+
+    /* Navigation Mobile Styles */
+    header {
+        flex-direction: row;
+        padding: 10px;
+        justify-content: flex-start;
+        position: relative;
+    }
+    
+    .logo {
+        margin-right: auto;
+        padding-left: 10px;
+    }
+    
+    nav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: #101F41;
+        display: none;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    nav.active {
+        display: block;
+    }
+    
+    nav ul {
+        width: 100%;
+        text-align: center;
+        margin: 0;
+        padding: 10px 0;
+    }
+    
+    nav ul li {
+        display: block;
+        margin: 13px 0;
+        font-size: 23px;
+        font-family: 'Architects Daughter', cursive;
+    }
+
+    /* Show burger menu */
     .burger-menu {
         display: block;
         position: absolute;
         right: 20px;
         top: 20px;
     }
-    // ... rest of the mobile styles remain the same ...
+
+    /* Burger animation classes */
+    .burger-menu.active .burger-line:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .burger-menu.active .burger-line:nth-child(2) {
+        opacity: 0;
+    }
+
+    .burger-menu.active .burger-line:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -6px);
+    }
 }
+
+/* Remove all burger menu and navigation related styles from the 768px media query */
 
 /* Add at the top after reset styles */
 * {
