@@ -47,7 +47,7 @@ header .main-logo {
 
 header h2 {
     font-size: 23px;
-    font-family: 'Architects Daughter', cursive;
+    font-family: 'Alice', serif;
 }
 
 nav ul {
@@ -107,7 +107,7 @@ section {
 .intro-subtitle {
     font-size: 32px;
     margin: 30px 0 15px 0;
-    font-family: 'Architects Daughter', cursive;
+    font-family: 'Alice', serif;
     text-decoration: underline;
     text-decoration-color: #4285f4;
     text-decoration-thickness: 3px;
@@ -149,7 +149,7 @@ section {
 
 .tagline {
     font-size: 40px;
-    font-family: 'Architects Daughter', cursive;
+    font-family: 'Alice', serif;
     margin-top: 10px;
 }
 
@@ -327,7 +327,7 @@ section {
         display: block;
         margin: 13px 0;
         font-size: 23px;
-        font-family: 'Architects Daughter', cursive;
+        font-family: 'Alice', serif;
     }
 
     /* Show burger menu */
@@ -372,7 +372,7 @@ section {
     font-size: 24px;
     margin: 0 0 10px 0;
     color: #101F41;
-    font-family: 'Architects Daughter', cursive;
+    font-family: 'Alice', serif;
 }
 
 .benefit-card p {
@@ -441,7 +441,7 @@ section {
     gap: 15px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s;
-    font-family: 'Architects Daughter', cursive;
+    font-family: 'Alice', serif;
 }
 
 #features li::before {
@@ -661,7 +661,7 @@ section {
     font-size: 24px;
     margin-bottom: 40px;
     color: #666;
-    font-family: 'Architects Daughter', cursive;
+    font-family: 'Alice', serif;
 }
 
 .contact-info {
@@ -1001,7 +1001,7 @@ footer {
       display: block;
       margin: 13px 0;
       font-size: 23px;
-      font-family: 'Architects Daughter', cursive;
+      font-family: 'Alice', serif;
   }
 
   /* Section Mobile Styles */
@@ -1425,7 +1425,7 @@ footer {
         display: block;
         margin: 13px 0;
         font-size: 23px;
-        font-family: 'Architects Daughter', cursive;
+        font-family: 'Alice', serif;
     }
 
     /* Show burger menu */
