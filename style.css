@@ -96,6 +96,9 @@ section {
     color: 'black';
     position: relative;
     font-weight: 1000;
+    border-bottom: 3px solid #4088DF;
+    padding-bottom: 10px;
+    display: inline-block;
 }
 
 .title-line {
@@ -179,7 +182,7 @@ section {
 
 .sensor-circles {
     position: absolute;
-    left: 30px;
+    left: 400px;
     top: 50%;
     transform: translateY(-50%);
     display: flex;
@@ -243,8 +246,8 @@ section {
 }
 
 .intro-image {
-    margin-top: 170px;
-    max-width: 85%;
+    margin-top: 70px;
+    max-width: 100%;
     max-height: auto;
     height: auto;
     border-radius: 20px;
@@ -655,6 +658,9 @@ section {
     margin-bottom: 20px;
     font-weight: 1000;
     color: #101F41;
+    border-bottom: 3px solid #4088DF;
+    padding-bottom: 10px;
+    display: inline-block;
 }
 
 .contact-subtitle {
@@ -662,6 +668,9 @@ section {
     margin-bottom: 40px;
     color: #666;
     font-family: 'Alice', serif;
+    border-bottom: 3px solid #4088DF;
+    padding-bottom: 10px;
+    display: inline-block;
 }
 
 .contact-info {
@@ -759,7 +768,7 @@ footer {
 
   .intro-image {
     margin-top: 10px;
-    width: 70%;
+    width: 90%;
   }
 
   .benefits-grid {
