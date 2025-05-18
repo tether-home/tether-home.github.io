@@ -47,7 +47,7 @@ header .main-logo {
 
 header h2 {
     font-size: 23px;
-    font-family: 'Architects Daughter', cursive;
+    font-family: 'Alice', serif;
 }
 
 nav ul {
@@ -96,6 +96,9 @@ section {
     color: 'black';
     position: relative;
     font-weight: 1000;
+    border-bottom: 3px solid #4088DF;
+    padding-bottom: 10px;
+    display: inline-block;
 }
 
 .title-line {
@@ -107,7 +110,7 @@ section {
 .intro-subtitle {
     font-size: 32px;
     margin: 30px 0 15px 0;
-    font-family: 'Architects Daughter', cursive;
+    font-family: 'Alice', serif;
     text-decoration: underline;
     text-decoration-color: #4285f4;
     text-decoration-thickness: 3px;
@@ -149,7 +152,7 @@ section {
 
 .tagline {
     font-size: 40px;
-    font-family: 'Architects Daughter', cursive;
+    font-family: 'Alice', serif;
     margin-top: 10px;
 }
 
@@ -179,7 +182,7 @@ section {
 
 .sensor-circles {
     position: absolute;
-    left: 30px;
+    left: 400px;
     top: 50%;
     transform: translateY(-50%);
     display: flex;
@@ -243,8 +246,8 @@ section {
 }
 
 .intro-image {
-    margin-top: 170px;
-    max-width: 85%;
+    margin-top: 70px;
+    max-width: 100%;
     max-height: auto;
     height: auto;
     border-radius: 20px;
@@ -327,7 +330,7 @@ section {
         display: block;
         margin: 13px 0;
         font-size: 23px;
-        font-family: 'Architects Daughter', cursive;
+        font-family: 'Alice', serif;
     }
 
     /* Show burger menu */
@@ -372,7 +375,7 @@ section {
     font-size: 24px;
     margin: 0 0 10px 0;
     color: #101F41;
-    font-family: 'Architects Daughter', cursive;
+    font-family: 'Alice', serif;
 }
 
 .benefit-card p {
@@ -441,7 +444,7 @@ section {
     gap: 15px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s;
-    font-family: 'Architects Daughter', cursive;
+    font-family: 'Alice', serif;
 }
 
 #features li::before {
@@ -655,13 +658,19 @@ section {
     margin-bottom: 20px;
     font-weight: 1000;
     color: #101F41;
+    border-bottom: 3px solid #4088DF;
+    padding-bottom: 10px;
+    display: inline-block;
 }
 
 .contact-subtitle {
     font-size: 24px;
     margin-bottom: 40px;
     color: #666;
-    font-family: 'Architects Daughter', cursive;
+    font-family: 'Alice', serif;
+    border-bottom: 3px solid #4088DF;
+    padding-bottom: 10px;
+    display: inline-block;
 }
 
 .contact-info {
@@ -759,7 +768,7 @@ footer {
 
   .intro-image {
     margin-top: 10px;
-    width: 70%;
+    width: 90%;
   }
 
   .benefits-grid {
@@ -778,10 +787,7 @@ footer {
   }
 
   .features-right {
-      text-align: center;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+    display: none;
   }
 
   .double-mock {
@@ -888,6 +894,8 @@ footer {
 
   .app-preview {
       max-width: 70%;
+      display: flex;
+      margin: auto
   }
 
   #introduction {
@@ -1001,7 +1009,7 @@ footer {
       display: block;
       margin: 13px 0;
       font-size: 23px;
-      font-family: 'Architects Daughter', cursive;
+      font-family: 'Alice', serif;
   }
 
   /* Section Mobile Styles */
@@ -1425,7 +1433,7 @@ footer {
         display: block;
         margin: 13px 0;
         font-size: 23px;
-        font-family: 'Architects Daughter', cursive;
+        font-family: 'Alice', serif;
     }
 
     /* Show burger menu */
@@ -1458,8 +1466,6 @@ footer {
 }
 
 .intro-list {
-    list-style: disc;
-    padding-left: 25px;
     margin: 15px 0;
 }
 

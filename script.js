@@ -39,10 +39,10 @@ document.addEventListener("DOMContentLoaded", function () {
         e.preventDefault();
         
         const email = 'sam.tetherhome@gmail.com';
-        const subject = 'Tether Starter Pack Order';
+        const subject = 'Sereeva Starter Pack Order';
         const body = `Hi,
 
-I'd like to order a Tether Starter Pack.
+I'd like to order a Sereeva Starter Pack.
 
 Best regards,
 
