@@ -787,10 +787,7 @@ footer {
   }
 
   .features-right {
-      text-align: center;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+    display: none;
   }
 
   .double-mock {
@@ -897,6 +894,8 @@ footer {
 
   .app-preview {
       max-width: 70%;
+      display: flex;
+      margin: auto
   }
 
   #introduction {
@@ -1467,8 +1466,6 @@ footer {
 }
 
 .intro-list {
-    list-style: disc;
-    padding-left: 25px;
     margin: 15px 0;
 }
 
