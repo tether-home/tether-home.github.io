@@ -31,8 +31,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Alice&display=swap" rel="stylesheet">
   <title>Sereeva - Peace of Mind, One Tap Away | Elderly Care Monitoring</title>
-  <link rel="stylesheet" href="style.css">
-  <script defer src="script.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="js/script.js"></script>
+  <!-- Stripe.js -->
+  <script src="https://js.stripe.com/v3/"></script>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-RD9FTXMR1Q"></script>
   <script>
@@ -44,29 +46,7 @@
   </script>
 </head>
 <body>
-
-  <!-- Navigation -->
-  <header role="banner">
-    <div class="logo">
-      <img src="assets/tether-transparent.png" alt="Sereeva Logo" class="main-logo">
-      <h1>Sereeva</h1>
-      <h2> - Peace of mind, one tap away</h2>
-    </div>
-    <div class="burger-menu">
-        <div class="burger-line"></div>
-        <div class="burger-line"></div>
-        <div class="burger-line"></div>
-    </div>
-    <nav>
-      <ul class="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#introduction">Introduction</a></li>
-        <li><a href="#features">Features</a></li>
-        <li><a href="#pricing">Pricing</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+  <div id="navbar-placeholder"></div>
 
   <main role="main">
     <!-- Home Section -->
@@ -211,12 +191,12 @@
 
         <div class="pricing-left">
           
-          <div class="price-text-container">
+          <div class="price-text-container" id="starter-pack-product" data-product-id="prod_starter_pack" data-name="Sereeva Starter Pack" data-price="19900" data-currency="GBP">
             <div class="price-circle">
               <span class="amount">£199</span>
             </div>
             <div class="pricing-text">
-              <p><strong>3 Months</strong> Subscription included</p>
+              <p><strong>1 Month</strong> Subscription included</p>
               <ul>
                 <li><strong>2x</strong> Motion Sensors</li>
                 <li><strong>2x</strong> Smart Plugs</li>
@@ -225,9 +205,8 @@
               </ul>
               <p><strong>Additional Devices:</strong> £12-15 each</p>
               <p><strong>Subscription:</strong> £10 per week after the included 3 months</p>
-              <a href="mailto:sam.tetherhome@gmail.com?subject=Sereeva%20Starter%20Pack%20Order&body=Hi%2C%0D%0A%0D%0AI'd%20like%20to%20order%20a%20Sereeva%20Starter%20Pack.%0D%0A%0D%0APlease%20contact%20me%20to%20arrange%20payment%20and%20delivery.%0D%0A%0D%0ABest%20regards" class="btn btn-primary buy-btn">
-                  <span class="bag-icon">🛍️</span>
-                  Order Starter Pack
+              <a href="https://buy.stripe.com/aFa5kD7osgGI8GNcQSeUU00" class="btn btn-primary add-to-cart-btn" data-product-id="prod_starter_pack">
+                  Order Now
               </a>
             </div>
           </div>
@@ -254,14 +233,14 @@
         <div class="contact-info">
           <div class="contact-info-item">
             <i>📧</i>
-            <p>sam.tetherhome@gmail.com</p>
+            <p>sam.sereeva@gmail.com</p>
           </div>
           <div class="contact-info-item">
             <i>📍</i>
             <p>Manchester, United Kingdom</p>
           </div>
         </div>
-        <a href="mailto:sam.tetherhome@gmail.com?subject=Sereeva%20Contact%20Us&body=Hi%2C%0D%0A%0D%0A%5BYour%20message%20here%5D%0D%0A%0D%0ABest%20regards%2C%0D%0A%5BYour%20name%5D" class="btn btn-primary contact-btn">
+        <a href="mailto:sam.sereeva@gmail.com?subject=Sereeva%20Contact%20Us&body=Hi%2C%0D%0A%0D%0A%5BYour%20message%20here%5D%0D%0A%0D%0ABest%20regards%2C%0D%0A%5BYour%20name%5D" class="btn btn-primary contact-btn">
           <span class="email-icon">📧</span>
           Email Us
         </a>
