@@ -52,7 +52,7 @@ ul li {
     color: black;
     position: relative;
     font-weight: 1000;
-    border-bottom: 3px solid #4088DF;
+    border-bottom: 3px solid #FF8B4E;
     padding-bottom: 10px;
     display: inline-block;
 }
@@ -62,7 +62,7 @@ ul li {
     margin: 30px 0 15px 0;
     font-family: 'Alice', serif;
     text-decoration: underline;
-    text-decoration-color: #4285f4;
+    text-decoration-color: #FF8B4E;
     text-decoration-thickness: 3px;
     text-underline-offset: 10px;
 }
@@ -93,20 +93,23 @@ section {
 .btn {
     display: inline-block;
     padding: 10px 20px;
-    background: #4088DF;
+    border: 1px solid #ffffff;
+    background-color: #101F41;
     color: white;
     text-decoration: none;
     margin-top: 10px;
     margin-right: 10px;
     border-radius: 40px;
     font-size: 21px;
-    border: none;
     cursor: pointer;
 }
 
 .btn-secondary {
-    border: 1px solid #ffffff;
-    background-color: #101F41;
+
+    background: #FF8B4E;
+    border: none;
+
+
 }
 
 /* ====================== 4. Header & Navigation ====================== */
@@ -237,9 +240,16 @@ nav ul li a {
     position: relative;
 }
 
+.home-left .main-logo {
+    width: 50%;
+    max-width: 220px;
+}
+
 .app-preview {
     max-width: 50%;
     height: auto;
+    object-fit: contain;
+    flex-shrink: 0;
 }
 
 .lines {
@@ -249,14 +259,12 @@ nav ul li a {
 }
 
 .sensor-circles {
-    position: absolute;
-    left: 27vw;
-    top: 50%;
-    transform: translateY(-50%);
     display: flex;
     flex-direction: column;
     gap: 50px;
     z-index: 2;
+    justify-content: center;
+    margin-left: 30px;
 }
 
 .sensor-circle {
@@ -300,6 +308,7 @@ nav ul li a {
 
 .intro-content-left {
     flex: 1;
+    display: flex;
 }
 
 .intro-content-right {
@@ -462,7 +471,7 @@ nav ul li a {
 
 .sensors-left {
     flex: 0.4;
-    background: #4088DF;
+    background: #FF8B4E;
     padding: 40px;
 }
 
@@ -518,10 +527,19 @@ nav ul li a {
 /* ====================== 9. Pricing Section ====================== */
 #pricing {
     background: linear-gradient(180deg, #EEF3FF 90%, #ffffff 100%);
+    padding: 80px 20px;
 }
 
 #pricing h2 {
     font-size: 50px;
+}
+
+.pricing-subtitle {
+    font-size: 24px;
+    color: #666;
+    margin-top: 15px;
+    margin-bottom: 50px;
+    font-family: 'Alice', serif;
 }
 
 #pricing .title-line {
@@ -532,30 +550,261 @@ nav ul li a {
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     max-width: 1500px;
-    gap: 40px;
+    gap: 60px;
 }
 
 #pricing .title-container {
     max-width: 1500px;
     margin: 0 auto;
+    text-align: center;
 }
 
 .pricing-left {
-    flex: 0.75;
+    flex: 1;
+    max-width: 600px;
 }
 
 .pricing-right {
-    flex: 0.7;
+    flex: 0.8;
 }
 
 .pricing-diagram {
     width: 100%;
     height: auto;
-    margin-top: 120px;
+    margin-top: 40px;
 }
 
+/* New Price Card Styles */
+.price-card {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border: 2px solid #EEF3FF;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.price-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Price Header */
+.price-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.price-badge {
+    background: linear-gradient(135deg, #FF8B4E, #FF6B35);
+    color: white;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+.price-circle {
+    width: 180px;
+    height: 180px;
+    background: linear-gradient(135deg, #FF8B4E, #FF6B35);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    margin: 20px auto;
+    position: relative;
+    box-shadow: 0 8px 25px rgba(255, 139, 78, 0.3);
+}
+
+.price-circle .currency {
+    font-size: 30px;
+    font-weight: bold;
+    margin-right: 5px;
+    align-self: flex-start;
+    margin-top: 20px;
+}
+
+.price-circle .amount {
+    font-size: 60px;
+    font-weight: bold;
+    line-height: 1;
+}
+
+.price-description {
+    font-size: 16px;
+    color: #666;
+    margin: 15px 0 0 0;
+}
+
+/* What's Included Section */
+.whats-included {
+    margin-bottom: 35px;
+}
+
+.whats-included h3 {
+    font-size: 24px;
+    color: #101F41;
+    margin-bottom: 25px;
+    text-align: left;
+    border-bottom: 2px solid #EEF3FF;
+    padding-bottom: 10px;
+}
+
+.included-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.included-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    background: #F8FAFF;
+    border-radius: 12px;
+    border-left: 4px solid #FF8B4E;
+}
+
+.item-icon {
+    font-size: 24px;
+    min-width: 30px;
+}
+
+.item-details strong {
+    display: block;
+    color: #101F41;
+    font-size: 16px;
+    margin-bottom: 4px;
+}
+
+.item-details p {
+    margin: 0;
+    font-size: 14px;
+    color: #666;
+    line-height: 1.3;
+}
+
+/* Subscription Info */
+.subscription-info {
+    margin-bottom: 35px;
+    background: #F0F7FF;
+    padding: 25px;
+    border-radius: 15px;
+    border: 1px solid #E0EFFF;
+}
+
+.subscription-highlight {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.highlight-badge {
+    background: #4CAF50;
+    color: white;
+    padding: 6px 15px;
+    border-radius: 15px;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.subscription-highlight h4 {
+    font-size: 20px;
+    color: #101F41;
+    margin: 15px 0 8px 0;
+}
+
+.subscription-highlight p {
+    margin: 0;
+    color: #666;
+    font-size: 16px;
+}
+
+.subscription-details {
+    text-align: center;
+    padding-top: 15px;
+    border-top: 1px solid #E0EFFF;
+}
+
+.subscription-details p {
+    margin: 8px 0;
+    font-size: 16px;
+    color: #333;
+}
+
+.small-text {
+    font-size: 14px !important;
+    color: #888 !important;
+}
+
+/* Value Props */
+.value-props {
+    margin-bottom: 35px;
+}
+
+.value-prop {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+    font-size: 16px;
+    color: #333;
+}
+
+.check-icon {
+    font-size: 18px;
+    min-width: 20px;
+}
+
+/* CTA Section */
+.cta-section {
+    text-align: center;
+}
+
+.buy-btn-new {
+    background: linear-gradient(135deg, #FF8B4E, #FF6B35);
+    border: none;
+    padding: 18px 40px;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 50px;
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 20px rgba(255, 139, 78, 0.3);
+    margin-bottom: 15px;
+}
+
+.buy-btn-new:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(255, 139, 78, 0.4);
+    background: linear-gradient(135deg, #FF6B35, #FF8B4E);
+}
+
+.urgency-text {
+    font-size: 16px;
+    color: #4CAF50;
+    font-weight: bold;
+    margin: 15px 0 10px 0;
+}
+
+.additional-devices {
+    font-size: 14px;
+    color: #666;
+    margin: 10px 0 0 0;
+    font-style: italic;
+}
+
+/* Legacy styles for backward compatibility */
 .price-text-container {
     background-color: #ffffff;
     padding: 20px;
@@ -564,24 +813,6 @@ nav ul li a {
     width: 100%;
     margin: 40px auto;
     max-width: 500px;
-}
-
-.price-circle {
-    width: 175px;
-    height: 175px;
-    background: #4088DF;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    margin: 30px auto;
-    position: relative;
-}
-
-.price-circle .amount {
-    font-size: 55px;
-    font-weight: bold;
 }
 
 .pricing-text p {
@@ -593,16 +824,12 @@ nav ul li a {
 }
 
 .buy-btn {
-    background: #101F41;
+    background: #FF8B4E;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 10px;
     margin: auto;
-}
-
-.bag-icon {
-    font-size: 24px;
 }
 
 /* ====================== 10. Contact Section ====================== */
@@ -634,7 +861,7 @@ nav ul li a {
     margin-bottom: 20px;
     font-weight: 1000;
     color: #101F41;
-    border-bottom: 3px solid #4088DF;
+    border-bottom: 3px solid #FF8B4E;
     padding-bottom: 10px;
     display: inline-block;
 }
@@ -644,7 +871,6 @@ nav ul li a {
     margin-bottom: 40px;
     color: #666;
     font-family: 'Alice', serif;
-    border-bottom: 3px solid #4088DF;
     padding-bottom: 10px;
     display: inline-block;
 }
@@ -680,7 +906,7 @@ nav ul li a {
 }
 
 .contact-btn {
-    background: #4088DF;
+    background: #FF8B4E;
     margin-top: 30px;
     display: flex;
     align-items: center;
@@ -716,7 +942,7 @@ footer {
 }
 
 #basket-page .intro-title {
-    border-bottom: 3px solid #4088DF;
+    border-bottom: 3px solid #FF8B4E;
     padding-bottom: 10px;
     display: inline-block;
 }
@@ -776,7 +1002,7 @@ footer {
 #basket-total-summary {
     margin-top: 30px;
     padding-top: 20px;
-    border-top: 2px solid #4088DF;
+    border-top: 2px solid #FF8B4E;
     text-align: right;
 }
 
@@ -834,7 +1060,7 @@ footer {
     }
     
     .app-preview {
-        width: 50%;
+        max-width: 30%;
     }
     
     .sensor-circle {
@@ -846,10 +1072,14 @@ footer {
     .intro-content {
         display: block;
     }
-    
+
+    .intro-content-left {
+        justify-content: center;
+    }
+
     .intro-image {
         margin-top: 10px;
-        width: 90%;
+        width: 100%;
     }
 
     /* Navigation Mobile Styles */
@@ -939,10 +1169,12 @@ footer {
     /* Pricing adjustments */
     .pricing-container {
         flex-direction: column;
+        gap: 40px;
     }
     
     .pricing-left {
         order: 2;
+        max-width: 100%;
     }
     
     .pricing-right {
@@ -953,6 +1185,29 @@ footer {
     .pricing-diagram {
         max-width: 70%;
         margin: 40px auto;
+    }
+    
+    /* New pricing card mobile adjustments */
+    .price-card {
+        padding: 30px;
+    }
+    
+    .included-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .price-circle {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .price-circle .amount {
+        font-size: 50px;
+    }
+    
+    .price-circle .currency {
+        font-size: 25px;
     }
     
     /* Introduction adjustments */
@@ -1023,9 +1278,8 @@ footer {
     }
     
     .app-preview {
-        max-width: 70%;
+        max-width: 45%;
         display: flex;
-        margin: auto;
     }
     
     #introduction {
@@ -1206,13 +1460,9 @@ footer {
     
     /* Sensor adjustments */
     .sensor-circles {
-        position: static;
-        flex-direction: row;
         justify-content: center;
         gap: 20px;
         margin-bottom: 30px;
-        transform: none;
-        width: 100%;
     }
     
     .sensor-circle {
